@@ -2,6 +2,8 @@ const accordionItems = document.querySelectorAll(".accordion-item");
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 const itemsLength = accordionItems.length;
 
+// one active at a time
+
 for (let i = 0; i < itemsLength; i++) {
   accordionHeaders[i].addEventListener("click", function () {
     const accordionContent = this.nextElementSibling;
@@ -21,3 +23,18 @@ for (let i = 0; i < itemsLength; i++) {
     }
   });
 }
+
+// many active at a time
+
+// for (let i = 0; i < itemsLength; i++) {
+//   accordionHeaders[i].addEventListener("click", function () {
+//     const accordionContent = this.nextElementSibling;
+//     this.parentNode.classList.toggle("active");
+    
+//     if (accordionContent.style.maxHeight) {
+//       accordionContent.style.maxHeight = null;
+//     } else {
+//       accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+//     }
+//   });
+// }
